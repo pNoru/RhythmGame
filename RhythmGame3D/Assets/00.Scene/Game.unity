@@ -767,13 +767,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 844451033}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe5a0cefabe463b41bf9e1d92f6bc94d, type: 3}
+  m_Script: {fileID: 11500000, guid: cbbe765d6f3c68942992982f56941e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Data: []
-  DData: []
-  source: 
-  Ssource: 
+  Note: {fileID: 8818158631680386876, guid: c2e36a0e8901e364dafec9394f301ec2, type: 3}
+  LongNoteRail: {fileID: 8818158631680386876, guid: c2e36a0e8901e364dafec9394f301ec2, type: 3}
 --- !u!1 &915850349
 GameObject:
   m_ObjectHideFlags: 0
