@@ -8,11 +8,11 @@ public class NoteMove : MonoBehaviour
     {
         if (this.transform.position.y >= -20)
         {
-            transform.Translate(0, -80 * Time.deltaTime, 0);
+            transform.Translate(0, -100 * Time.deltaTime, 0);
         }
         else
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 }

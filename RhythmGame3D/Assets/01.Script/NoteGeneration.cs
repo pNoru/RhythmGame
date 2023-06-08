@@ -2,16 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-using Unity.VisualScripting;
 
 public class NoteGeneration : MonoBehaviour
 {
-    private int N, BPM, Beat;
-    private bool start;
-    private double CurrentTime;
+    public int N, BPM, Beat;
+    public bool start;
+    public double CurrentTime;
     public GameObject Note;
     public GameObject LongNoteRail;
-    private List<string> Data;
+    public List<string> Data;
     private string source, BBText;
     public AudioManager AudioManager;
     private void Start()
@@ -19,7 +18,7 @@ public class NoteGeneration : MonoBehaviour
         N = 0;
         start = false;
         BBText = File.ReadAllText(Application.dataPath + "/08.NSM/bbdata.txt").Replace("\n", string.Empty).Replace(" ", string.Empty);
-        source = File.ReadAllText(Application.dataPath + "/08.NSM/data.txt").Replace("\n", string.Empty).Replace(" ", string.Empty);
+        source = File.ReadAllText(Application.dataPath + "/08.NSM/data.txt").Replace("\n", string.Empty);
         Data = new List<string>(BBText.Split(","));
         BPM = int.Parse(Data[0]); Beat = int.Parse(Data[1]);
         Data = new List<string>(source.Split(","));
@@ -27,7 +26,7 @@ public class NoteGeneration : MonoBehaviour
 
     private void Update()
     {
-        if (Data[N] == string.Empty)
+        if (Data[N * 4] == string.Empty)
         {
             start = false;
         }
@@ -37,9 +36,10 @@ public class NoteGeneration : MonoBehaviour
             
             if(CurrentTime >= 60d / BPM / Beat)
             {
-                Generation(Data.GetRange(N * 4, (N * 4) + 4));
                 CurrentTime -= 60d / BPM / Beat;
                 N += 1;
+                Generation(Data.GetRange(N * 4, 4));
+                AudioManager.TickTock;
             }
         }
     }
@@ -62,6 +62,10 @@ public class NoteGeneration : MonoBehaviour
         {
             Instantiate(Note, new Vector3(7.5f, 800, 0), Quaternion.identity);
         }
+    }
+    public void NoteStart()
+    {
+        start = true;
     }
 }
 

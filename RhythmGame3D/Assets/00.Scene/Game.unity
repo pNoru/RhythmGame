@@ -743,6 +743,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab154447ca132654aabaca09a8aaad41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoteGeneration: {fileID: 844451036}
+  AudioManager: {fileID: 1205796747}
 --- !u!4 &844451035
 Transform:
   m_ObjectHideFlags: 0
@@ -770,8 +772,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbbe765d6f3c68942992982f56941e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  N: 0
+  BPM: 0
+  Beat: 0
+  start: 0
+  CurrentTime: 0
   Note: {fileID: 8818158631680386876, guid: c2e36a0e8901e364dafec9394f301ec2, type: 3}
   LongNoteRail: {fileID: 8818158631680386876, guid: c2e36a0e8901e364dafec9394f301ec2, type: 3}
+  Data: []
 --- !u!1 &915850349
 GameObject:
   m_ObjectHideFlags: 0
@@ -1424,6 +1432,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1205796746}
   - component: {fileID: 1205796745}
+  - component: {fileID: 1205796747}
   m_Layer: 0
   m_Name: Audio Source
   m_TagString: Untagged
@@ -1442,7 +1451,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1542,6 +1551,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1205796747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205796744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a662412efcdf1f41affdae2d5bcce31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1205796745}
+  s: 0
 --- !u!1 &1359351001
 GameObject:
   m_ObjectHideFlags: 0

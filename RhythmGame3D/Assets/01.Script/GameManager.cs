@@ -4,16 +4,28 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField]
+    public NoteGeneration NoteGeneration;
+    public AudioManager AudioManager;
+    private bool sstart;
+    public double PlayTime;
     
     void Start()
     {
-        
+        sstart = false;
     }
 
-    // Update is called once per frame
-    void Update()
+
+    private void Update()
     {
-        
+        PlayTime += Time.deltaTime;
+        if (!sstart)
+        {
+            if (Input.anyKey)
+            {
+                NoteGeneration.NoteStart();
+                StartCoroutine(AudioManager.AudioStart());
+                sstart = true;
+            }
+        }
     }
 }
