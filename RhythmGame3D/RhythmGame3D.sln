@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{BE9978DC-AB98-9C68-9710-C5B90D6AF4EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elringus.SpriteGlow.Runtime", "Elringus.SpriteGlow.Runtime.csproj", "{D1FE4F6D-DFD1-E6BA-8902-845F4F260EE8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{BE9978DC-AB98-9C68-9710-C5B90D6AF4EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE9978DC-AB98-9C68-9710-C5B90D6AF4EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE9978DC-AB98-9C68-9710-C5B90D6AF4EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1FE4F6D-DFD1-E6BA-8902-845F4F260EE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1FE4F6D-DFD1-E6BA-8902-845F4F260EE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1FE4F6D-DFD1-E6BA-8902-845F4F260EE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1FE4F6D-DFD1-E6BA-8902-845F4F260EE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

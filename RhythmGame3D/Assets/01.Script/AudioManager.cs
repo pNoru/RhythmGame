@@ -7,16 +7,20 @@ using UnityEditor;
 public class AudioManager : MonoBehaviour
 {
     public AudioSource audioSource;
-    public int s;
+    public AudioSource metronome;
+    private void Start()
+    {
+        metronome.clip = Resources.Load("ticktock") as AudioClip;
+        audioSource.clip = Resources.Load("aaa") as AudioClip;
+    }
     public IEnumerator AudioStart()
     {
-        s = 2;
-        audioSource.clip = Resources.Load("aaa") as AudioClip;
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(5.8f);
         audioSource.Play();
     }
-    public void TickTock()
+    public IEnumerator TickTock()
     {
-
+        yield return new WaitForSeconds(6.9f);
+        metronome.Play();
     }
 }
