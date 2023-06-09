@@ -7,18 +7,21 @@ using UnityEngine.UI;
 public class UiManager : MonoBehaviour
 {
     public Text PointT, ComboT, JudgmentT;
+    public GameObject ObjJudgment, ObjCombo;
     private string X;
     public void PointText(long P, int C, int J)
     {
         X = P.ToString();
         PointT.text = X;
         X = C.ToString();
-        if (C > 10)
+        if (C >= 10)
         {
+            ObjJudgment.transform.localPosition = new Vector3(0, 0, 0);
             ComboT.text = X + "Combo";
         }
         else
         {
+            ObjJudgment.transform.localPosition = new Vector3(0, -20, 0);
             ComboT.text = "";
         }
 

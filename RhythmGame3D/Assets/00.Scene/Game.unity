@@ -468,6 +468,8 @@ MonoBehaviour:
   PointT: {fileID: 1931089263}
   ComboT: {fileID: 1308236874}
   JudgmentT: {fileID: 348524975}
+  ObjJudgment: {fileID: 348524973}
+  ObjCombo: {fileID: 1308236872}
 --- !u!1 &222063366
 GameObject:
   m_ObjectHideFlags: 0
@@ -736,7 +738,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -20}
   m_SizeDelta: {x: 1000, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &348524975
@@ -1281,6 +1283,7 @@ MonoBehaviour:
   NoteManager: {fileID: 844451038}
   NS: 0
   JUdd: 0
+  NSYL: []
 --- !u!114 &844451038
 MonoBehaviour:
   m_ObjectHideFlags: 0

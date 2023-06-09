@@ -5,7 +5,6 @@ using UnityEngine.Pool;
 
 public class NoteManager : MonoBehaviour
 {
-    public int N;
     public GameObject objectPrefeb;
     Queue<GameObject> ObjectPool = new Queue<GameObject>(); //오브젝트를 담을 큐
     public static NoteManager instance = null;
@@ -57,6 +56,5 @@ public class NoteManager : MonoBehaviour
         obj.gameObject.SetActive(false);
         obj.transform.SetParent(instance.transform);
         instance.ObjectPool.Enqueue(obj); //다시 큐에 넣음
-        N += 1;
     }
 }
