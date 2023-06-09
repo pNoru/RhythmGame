@@ -7,12 +7,13 @@ public class NoteGeneration : MonoBehaviour
 {
     private int N;
     private double CurrentTime;
-    public GameObject Note;
-    public GameObject LongNoteRail;
+    private GameObject Note;
+    private GameObject LongNoteRail;
     public GameManager GameManager;
+    public NoteManager NoteManager;
     private List<string> Data;
     private string source;
-    private void Start()
+    private void Awake()
     {
         N = 0;
         source = File.ReadAllText(Application.dataPath + "/08.NSM/data.txt").Replace("\n", string.Empty).Replace(" ", string.Empty);
@@ -23,7 +24,7 @@ public class NoteGeneration : MonoBehaviour
     {
         if (Data[N * 4] == string.Empty)
         {
-            GameManager.end();
+            GameManager.End();
         }
         else
         {
@@ -36,19 +37,23 @@ public class NoteGeneration : MonoBehaviour
     {
         if (int.Parse(NG[0]) == 1)
         {
-            Instantiate(Note, new Vector3(-7.5f, 400, -0.02f), Quaternion.identity);
+            Note = NoteManager.GetObject();
+            Note.transform.position = new Vector3(-7.5f, 400, -0.02f);
         }
         if (int.Parse(NG[1]) == 1)
         {
-            Instantiate(Note, new Vector3(-2.5f, 400, -0.02f), Quaternion.identity);
+            Note = NoteManager.GetObject();
+            Note.transform.position = new Vector3(-2.5f, 400, -0.02f);
         }
         if (int.Parse(NG[2]) == 1)
         {
-            Instantiate(Note, new Vector3(2.5f, 400, -0.02f), Quaternion.identity);
+            Note = NoteManager.GetObject();
+            Note.transform.position = new Vector3(2.5f, 400, -0.02f);
         }
         if (int.Parse(NG[3]) == 1)
         {
-            Instantiate(Note, new Vector3(7.5f, 400, -0.02f), Quaternion.identity);
+            Note = NoteManager.GetObject();
+            Note.transform.position = new Vector3(7.5f, 400, -0.02f);
         }
     }
 }

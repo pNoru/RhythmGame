@@ -8,19 +8,19 @@ public class AudioManager : MonoBehaviour
 {
     public AudioSource audioSource;
     public AudioSource metronome;
-    private void Start()
+    private void Awake()
     {
         metronome.clip = Resources.Load("ticktock") as AudioClip;
         audioSource.clip = Resources.Load("aaa") as AudioClip;
     }
     public IEnumerator AudioStart()
     {
-        yield return new WaitForSeconds(5.8f);
+        yield return new WaitForSeconds(5.85f);
         audioSource.Play();
     }
     public IEnumerator TickTock()
     {
-        yield return new WaitForSeconds(6.9f);
+        yield return new WaitForSeconds(5f);
         metronome.Play();
     }
 }
