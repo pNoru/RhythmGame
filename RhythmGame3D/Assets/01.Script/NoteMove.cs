@@ -26,33 +26,23 @@ public class NoteMove : MonoBehaviour
         {
             JN = false;
             Judgment = GameObject.Find("GameManager").GetComponent<Judgment>();
-            switch (this.transform.position.x)
+            if (this.transform.position.x == -7.5f)
             {
-                case -7.5f:
-                    {
-                        Judgment.DFJKN(this.gameObject, 0);
-                        N = 0;
-                        break;
-                    }
-                case -2.5f:
-                    {
-                        Judgment.DFJKN(this.gameObject, 1);
-                        N = 1;
-                        break;
-                    }
-                case 2.5f:
-                    {
-                        Judgment.DFJKN(this.gameObject, 2);
-                        N = 2;
-                        break;
-                    }
-                case 7.5f:
-                    {
-                        Judgment.DFJKN(this.gameObject, 3);
-                        N = 3;
-                        break;
-                    }
+                N = 0;
             }
+            if (this.transform.position.x == -2.5f)
+            {
+                N = 1;
+            }
+            if (this.transform.position.x == 2.5f)
+            {
+                N = 2;
+            }
+            if (this.transform.position.x == 7.5f)
+            {
+                N = 3;
+            }
+            Judgment.DFJKN(this.gameObject, N);
         } 
         if(this.transform.position.y >= 40)
         {

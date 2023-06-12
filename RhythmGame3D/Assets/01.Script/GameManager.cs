@@ -16,7 +16,6 @@ public class GameManager : MonoBehaviour
     private string BBText;
     private long Point;
     private float Times;
-    public int SSs, Tlqkf;
     private void Awake()
     {
         N = 0;
@@ -111,7 +110,6 @@ public class GameManager : MonoBehaviour
             Combo = 0;
         }
         
-        SSs = N;
         UiManager.PointText(Point, Combo, N);
     }
 }
