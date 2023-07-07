@@ -9,9 +9,16 @@ public class SceneChanger : MonoBehaviour
     {
         SceneManager.LoadScene("InGame");
     }
-
+    public void ROnClick()
+    {
+        SceneManager.LoadScene("RS");
+    }
     public void EOnClick()
     {
         Application.Quit();
+    }
+    public void Back()
+    {
+        SceneManager.LoadScene("Start");
     }
 }

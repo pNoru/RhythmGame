@@ -7,7 +7,7 @@ public class ObjPooling : MonoBehaviour
     public GameObject notePrefeb, linePrefeb, bONPrefeb;
     Queue<GameObject> NotePool = new Queue<GameObject>(), LinePool = new Queue<GameObject>(), BONPool = new Queue<GameObject>(); //오브젝트를 담을 큐
     public static ObjPooling instance = null;
-    
+    private Dictionary<object, List<GameObject>> pooledObjects = new Dictionary<object, List<GameObject>>();
     void Awake()
     {
         if (null == instance)
