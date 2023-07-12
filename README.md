@@ -1,2 +1,2 @@
 # RhythmGame
-probably my first work 아마 첫번째 작업물!
+심심할때 만드는 게임
